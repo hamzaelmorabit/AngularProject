@@ -1,0 +1,16 @@
+<form class="text-center border border-light p-5" action="list">
+  <p class="h4 mb-4">Nouveau personne !</p>
+  <input type="text" #id class="form-control mb-4" placeholder="Id" /><br />
+  <input type="text" #nom class="form-control mb-4" placeholder="Nom" /><br />
+  <input type="text" #age class="form-control mb-4" placeholder="Age" /><br />
+  <button
+    (click)="addpersonne(+id.value, nom.value, +age.value)"
+    routerLink="/list"
+  >
+    Ajouter
+  </button>
+</form>
+<!--
+    (click)="addpersonne(+id.value, nom.value, +age.value)"
+    routerLink="/list"
+    -->
