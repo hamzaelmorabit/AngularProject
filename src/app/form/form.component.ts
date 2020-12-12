@@ -10,12 +10,7 @@ export class FormComponent implements OnInit {
   /*  id: number;
    nom: string;
    age: number; */
-  constructor(private servicepersonne: PersonServiceService) {
-
-
-
-
-  }
+  constructor(private servicepersonne: PersonServiceService) { }
   // tslint:disable-next-line:typedef
   addpersonne(id: number, nom: string, age: number) {
     console.log(id);

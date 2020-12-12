@@ -7,10 +7,10 @@ import { PersonServiceService } from '../person-service.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
- /*
-  public persons = [ {id : 12, nom : 'Najmi', age: 25 },
-  {id : 2, nom : 'Alami', age: 4112 }]; */
-  public persons ;
+  /*
+   public persons = [ {id : 12, nom : 'Najmi', age: 25 },
+   {id : 2, nom : 'Alami', age: 4112 }]; */
+  public persons;
   constructor(private servicepersonne: PersonServiceService) { }
 
   ngOnInit(): void {
@@ -20,9 +20,9 @@ export class ListComponent implements OnInit {
 
 
   // tslint:disable-next-line:typedef
-  deletePerson(id: number){
+  DeletePerson(id: number) {
     console.log('delete ');
-    if (confirm('You want to delete the person ?')){
+    if (confirm('You want to delete the person ?')) {
       this.servicepersonne.deletepersonne(id);
     }
   }
