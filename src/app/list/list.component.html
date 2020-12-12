@@ -20,7 +20,11 @@
           <td>
             <button class="btn btn-danger" (click)="DeletePerson(person.id)">
               Delete</button
-            >&nbsp;<button class="btn btn-info" style="padding-left: 20px">
+            >&nbsp;<button
+              [routerLink]="['../update', person.id]"
+              class="btn btn-info"
+              style="padding-left: 20px"
+            >
               Modifier
             </button>
           </td>

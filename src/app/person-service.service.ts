@@ -4,18 +4,26 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PersonServiceService {
-  personnes = [ {id : 1, nom : 'Najmi', age: 25 }, {id : 2, nom : 'Alami', age: 42 }];
+  personnes = [{ id: 1, nom: 'Najmi', age: 25 }, { id: 2, nom: 'Alami', age: 42 }];
 
   constructor() { }
   // tslint:disable-next-line:typedef
-  getpersonne(id: number){return this.personnes.find(e => e.id === +id); }
+  getpersonne(id: number) { return this.personnes.find(e => e.id === +id); }
   // tslint:disable-next-line:typedef
-  deletepersonne(id: number) {this.personnes.splice(  this.personnes.findIndex(e => e.id === +id), 1); }
+  deletepersonne(id: number) { this.personnes.splice(this.personnes.findIndex(e => e.id === +id), 1); }
   // tslint:disable-next-line:typedef
   addpersonne(id: number, nom: string, age: number) {
-        this.personnes.push({id, nom, age});
+    this.personnes.push({ id, nom, age });
 
-       }
-// tslint:disable-next-line:typedef
-  getListpersonnes(){return this.personnes; }
+  }
+  // tslint:disable-next-line:typedef
+  getListpersonnes() { return this.personnes; }
+  // tslint:disable-next-line:typedef
+  updatePerson(id, nom, age) {
+    console.log(typeof (id));
+    this.personnes[this.personnes.findIndex(e => e.id === +id)] = {
+      id, nom, age
+    };
+    //    this.personnes.forEach(person => { if (this.getpersonne(id) === person) { person = { id, age, nom }; } });
+  }
 }

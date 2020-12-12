@@ -10,6 +10,7 @@ import { FormComponent } from './form/form.component';
 import { DetailsComponent } from './details/details.component';
 import { ParentComponent } from './parent/parent.component';
 import { DetailsComponentComponent } from './details-component/details-component.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { DetailsComponentComponent } from './details-component/details-component
     DetailsComponent,
     ParentComponent,
 
-    DetailsComponentComponent
+    DetailsComponentComponent,
+
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

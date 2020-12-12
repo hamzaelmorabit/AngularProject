@@ -5,9 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
+import { UpdateComponent } from './update/update.component';
 const routes: Routes = [
   { path: '', redirectTo: 'list', pathMatch: 'full' },
 
+  { path: 'update/:id', component: UpdateComponent },
   { path: 'list', component: ListComponent },
   { path: 'form', component: FormComponent },
   { path: 'details/:id', component: DetailsComponent }
