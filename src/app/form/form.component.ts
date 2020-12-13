@@ -13,8 +13,7 @@ export class FormComponent implements OnInit {
   constructor(private servicepersonne: PersonServiceService) { }
   // tslint:disable-next-line:typedef
   addpersonne(id: number, nom: string, age: number) {
-    console.log(id);
-    this.servicepersonne.addpersonne(id, nom, age);
+    if (id && nom && age) { this.servicepersonne.addpersonne(id, nom, age); }
   }
 
   ngOnInit(): void {
