@@ -17,13 +17,13 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     const person = this.servicepersonne.getpersonne(this.id);
-    if (person) {
-      this.nom = person.nom;
-      this.age = person.age;
-    }
-    console.log(this.nom);
-  }
 
+    this.nom = person.nom;
+    this.age = person.age;
+
+
+  }
+  updatePerson() { }
 }
 
 

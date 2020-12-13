@@ -26,9 +26,9 @@
 </form>
  -->
 
-<div class="text-center border border-light p-5">
+<!-- <div class="text-center border border-light p-5">
   <p>
-    <b>Détailspersonne</b>
+    <b>Détails of {{ nom }}</b>
   </p>
   <table>
     <tr>
@@ -48,4 +48,51 @@
       <td class="btn btn-info btn-block">:{{ age }}</td>
     </tr>
   </table>
-</div>
+</div> -->
+
+<form class="text-center border border-light p-5">
+  <p style="margin-bottom: 2%" class="h4 mb-4">Details of {{ nom }}</p>
+
+  <div style="width: 50%; margin-left: 37%; margin: 2 auto">
+    <div style="display: flex">
+      <p style="margin-right: 4.3%; margin-top: 0.5%">Id</p>
+      <input
+        readonly="readonly"
+        style="margin-left: 2em; text-align: center; width: 30%"
+        type="text"
+        [value]="id"
+        class="form-control mb-4"
+      />
+    </div>
+
+    <div style="display: flex">
+      <p style="margin-top: 0.5%">Age</p>
+      <input
+        readonly="readonly"
+        style="margin-left: 2.5em; text-align: center; width: 30%"
+        type="text"
+        [value]="age"
+        class="form-control mb-4"
+      />
+    </div>
+    <div style="display: flex">
+      <p style="margin-top: 0.5%; margin-right: 2.3%">Nom</p>
+      <input
+        readonly="readonly"
+        style="margin-left: 1.5em; text-align: center; width: 30%"
+        type="text"
+        [value]="nom"
+        class="form-control mb-4"
+      />
+    </div>
+  </div>
+  <button
+    style="margin-top: 4%; width: 30%; margin: 0 auto"
+    class="btn btn-info btn-block"
+    routerLink="/list"
+  >
+    OK
+  </button>
+</form>
+
+<!-- [innerHTML]="action" -->
