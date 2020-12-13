@@ -1,0 +1,49 @@
+<form class="text-center border border-light p-5">
+  <p
+    style="margin-bottom: 2%"
+    class="h4 mb-4"
+    [innerHTML]="title"
+    [hidden]="hidden"
+  ></p>
+  <div style="display: flex">
+    <p style="margin-right: 4.3%; margin-top: 0.5%">Id</p>
+    <input
+      type="text"
+      #id
+      class="form-control mb-4"
+      [value]="upid"
+      placeholder="Id"
+    />
+  </div>
+  <div style="display: flex">
+    <p style="margin-top: 0.5%">Age</p>
+    <input
+      style="margin-left: 2em"
+      type="text"
+      #age
+      [value]="upage"
+      placeholder="Age"
+      class="form-control mb-4"
+    />
+  </div>
+  <div style="display: flex">
+    <p style="margin-top: 0.5%; margin-right: 2.3%">Nom</p>
+    <input
+      type="text"
+      #nom
+      [value]="upnom"
+      placeholder="Nom"
+      class="form-control mb-4"
+    />
+  </div>
+  <button
+    style="margin-top: 4%"
+    class="btn btn-info btn-block"
+    (click)="updatePerson(action, +id.value, +age.value, nom.value)"
+    routerLink="/list"
+  >
+    CONFIRM
+  </button>
+</form>
+
+<!-- [innerHTML]="action" -->
