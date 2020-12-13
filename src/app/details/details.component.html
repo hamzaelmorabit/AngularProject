@@ -1,19 +1,51 @@
-<div align="center">
+<!-- <form class="text-center border border-light p-5" action="list">
+  <p class="h4 mb-4">Details of Person</p>
+
+  <input
+    type="text"
+    #id
+    class="form-control mb-4"
+    [value]="nom"
+    placeholder="Nom"
+  /><br />
+  <input
+    type="text"
+    #nom
+    class="form-control mb-4"
+    [value]="nom"
+    placeholder="Nom"
+  /><br />
+  <input
+    type="text"
+    #nom
+    [value]="nom"
+    placeholder="Nom"
+    class="form-control mb-4"
+  /><br />
+  <button class="btn btn-info btn-block" routerLink="/list">Ajouter</button>
+</form>
+ -->
+
+<div class="text-center border border-light p-5">
   <p>
     <b>Détailspersonne</b>
   </p>
   <table>
     <tr>
       <th>Id</th>
-      <td>:{{ id }}</td>
+      <td></td>
+      <td class="btn btn-info btn-block">{{ id }}</td>
     </tr>
     <tr>
-      <th>Nom</th>
-      <td>:{{ nom }}</td>
+      <th style="padding: 8%; margin: 18%">Nom</th>
+      <td></td>
+
+      <td class="btn btn-info btn-block">:{{ nom }}</td>
     </tr>
     <tr>
-      <th>Age</th>
-      <td>:{{ age }}</td>
+      <th style="padding: 8%; margin: 338%">Age</th>
+      <td></td>
+      <td class="btn btn-info btn-block">:{{ age }}</td>
     </tr>
   </table>
 </div>

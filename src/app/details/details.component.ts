@@ -12,26 +12,28 @@ export class DetailsComponent implements OnInit {
   id: number;
   nom: string;
   age: number;
-   constructor(private servicepersonne: PersonServiceService, private route: ActivatedRoute) { }
+  constructor(private servicepersonne: PersonServiceService, private route: ActivatedRoute) { }
 
-   ngOnInit(): void {
-     this.id = this.route.snapshot.params.id;
-     const person = this.servicepersonne.getpersonne(this.id);
-     if (person) {
-     this.nom = person.nom;
-     this.age = person.age; }
-   }
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params.id;
+    const person = this.servicepersonne.getpersonne(this.id);
+    if (person) {
+      this.nom = person.nom;
+      this.age = person.age;
+    }
+    console.log(this.nom);
+  }
 
 }
 
 
- /*  id: number;
-  nom: string;
-  age: string;
-  constructor(private route: ActivatedRoute) { }
+/*  id: number;
+ nom: string;
+ age: string;
+ constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.id = this.route.snapshot.params.id;
-    this.nom = this.route.snapshot.params.nom;
-    this.age = this.route.snapshot.params.age;
-  } */
+ ngOnInit(): void {
+   this.id = this.route.snapshot.params.id;
+   this.nom = this.route.snapshot.params.nom;
+   this.age = this.route.snapshot.params.age;
+ } */
