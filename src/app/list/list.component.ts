@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonServiceService } from '../person-service.service';
-
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -10,7 +10,7 @@ export class ListComponent implements OnInit {
   /*
    public persons = [ {id : 12, nom : 'Najmi', age: 25 },
    {id : 2, nom : 'Alami', age: 4112 }]; */
-  public persons;
+  persons: Observable<any>;
   constructor(private servicepersonne: PersonServiceService) { }
 
   ngOnInit(): void {
