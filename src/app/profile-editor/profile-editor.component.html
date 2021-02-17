@@ -1,0 +1,14 @@
+<!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input formControlName="firstName" placeholder="FirstName" />
+  <input formControlName="lastName" placeholder="LastName" />
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+<div>{{ profileForm.status }}</div> -->
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input formControlName="firstName" placeholder="FirstName" />
+  <div class="frist-requ" *ngIf="firstName()">First Name is required</div>
+  <input formControlName="lastName" placeholder="LastName" />
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+<div>{{ profileForm.status }}</div>

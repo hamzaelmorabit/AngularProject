@@ -1,13 +1,22 @@
 <form class="text-center border border-light p-5" action="list">
-  <p class="h4 mb-4">Nouveau personne</p>
+  <p class="h4 mb-4">Ajouter personne</p>
   <input type="text" #id class="form-control mb-4" placeholder="Id" /><br />
   <input type="text" #nom class="form-control mb-4" placeholder="Nom" /><br />
-  <input type="text" #age class="form-control mb-4" placeholder="Age" /><br />
+  <input
+    type="text"
+    name="age"
+    id="age"
+    class="form-control mb-4"
+    [(ngModel)]="person.age"
+    placeholder="Age"
+  /><br />
   <button
-    (click)="addpersonne(+id.value, nom.value, +age.value)"
+    (click)="addpersonne(+id.value, nom.value)"
     class="btn btn-info btn-block"
     routerLink="/list"
   >
     Ajouter
   </button>
 </form>
+<!-- #age -->
+<!-- +age.value)" -->
