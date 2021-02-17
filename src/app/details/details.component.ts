@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PersonServiceService } from '../person-service.service';
+import { Observable } from 'rxjs';
 /* import { PersonServiceService } from '../person-service.service'; */
 
 @Component({
@@ -9,21 +10,29 @@ import { PersonServiceService } from '../person-service.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  id: number;
-  nom: string;
-  age: number;
+  id: any;
+  nom: any;
+  age: Observable<any>;
+  person: Observable<any>;
   constructor(private servicepersonne: PersonServiceService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params.id;
-    const person = this.servicepersonne.getpersonne(this.id);
 
-    this.nom = person.nom;
-    this.age = person.age;
+    this.id = this.route.snapshot.params.id;
+    /*   const person = this.servicepersonne.getpersonne(this.id); */
+    // this.person =
+    this.servicepersonne.getpersonne(this.id).subscribe(person => {
+      this.nom = person.nom;
+      this.age = person.age;
+
+    });
+    // console.log(this.person);
+    // this.nom = this.person.nom;
+    // this.age = this.person.age;
 
 
   }
-  updatePerson() { }
+  // updatePerson() { }
 }
 
 

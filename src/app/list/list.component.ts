@@ -14,16 +14,30 @@ export class ListComponent implements OnInit {
   constructor(private servicepersonne: PersonServiceService) { }
 
   ngOnInit(): void {
-    this.persons = this.servicepersonne.getListpersonnes();
-    console.log(this.persons);
-  }
 
+    this.persons = this.servicepersonne.getListpersonnes();
+    //  console.log(this.persons);
+  }
+  // tslint:disable-next-line:typedef
+  reloadData() {
+    console.log('reloadData');
+    this.persons = this.servicepersonne.getListpersonnes();
+  }
 
   // tslint:disable-next-line:typedef
   DeletePerson(id: number) {
-    console.log('delete ');
+    // console.log('delete ');
     if (confirm('You want to delete the person ?')) {
-      this.servicepersonne.deletepersonne(id);
+      //  this.servicepersonne.deletepersonneS(id);
+      this.servicepersonne.deletepersonneS(id)
+        .subscribe(
+          data => {
+            console.log(data);
+            this.reloadData();
+
+          },
+          error => console.log(error));
+
     }
   }
 

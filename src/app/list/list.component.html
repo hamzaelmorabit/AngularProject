@@ -1,4 +1,5 @@
 <div style="margin-top: 4%" class="panel panel-primary">
+  <style></style>
   <div>
     <h2 style="text-align: center" class="h4 mb-4">Liste des personnes</h2>
   </div>
@@ -12,8 +13,11 @@
           <th></th>
         </tr>
       </thead>
+
+      <div style="color: red"></div>
+
       <tbody>
-        <tr *ngFor="let person of persons|async">
+        <tr *ngFor="let person of persons | async">
           <td>{{ person.id }}</td>
           <td>{{ person.nom }}</td>
           <td>{{ person.age }}</td>

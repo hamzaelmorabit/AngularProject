@@ -8,16 +8,16 @@ import { PersonServiceService } from '../person-service.service';
   styleUrls: ['./details-component.component.css']
 })
 export class DetailsComponentComponent implements OnInit {
- id: number;
- nom: string;
- age: number;
+  id: number;
+  nom: string;
+  age: number;
   constructor(private servicepersonne: PersonServiceService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     const person = this.servicepersonne.getpersonne(this.id);
-    this.nom = person.nom;
-    this.age = person.age;
+    // this.nom = person.nom;
+    // this.age = person.age;
   }
 
 }

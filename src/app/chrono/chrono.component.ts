@@ -35,18 +35,18 @@ export class ChronoComponent implements OnInit {
       next: value => {
         this.second = value;
 
-        if (this.second === 9) {
+        if (this.second === 59) {
           this.minute += 1;
           // else { this.minute = 1; }
           this.compt = 0;
 
         }
-        if (this.minute === 2) {
+        if (this.minute === 59) {
           this.heure += 1;
           this.compt = 0;
           this.minute = 0;
         }
-        console.log(this.compt);
+        // console.log(this.compt);
       },
       error: err => console.log(err),
       complete: () => console.log('Done')
